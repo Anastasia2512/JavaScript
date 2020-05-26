@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <title>Document</title>
+      <style>
+          div{
+              width: 175pt;
+              height: 200pt;
+              background-color: aqua;
+              text-align: center;
+            
+          }
+            .b1{
+              height: 30pt;
+              width: 30pt;
+              align-content: center;
+          }
+          
+      </style>
+
+
+</head>
+<body>
+
+    <div>
+        <input type="text" id="i1" value=" "/>
+        <button class="b1" onclick="getNumber(value)" value="C">C</button>
+        <br>
+        <button class="b1" onclick="getNumber(value)" value="1">1</button>
+        <button class="b1" onclick="getNumber(value)" value="2">2</button>
+        <button class="b1" onclick="getNumber(value)" value="3">3</button>
+        <button class="b1" onclick="getNumber(value)" value="-">-</button>
+        <br>
+        <button class="b1" onclick="getNumber(value)" value="4">4</button>
+        <button class="b1" onclick="getNumber(value)" value="5">5</button>
+        <button class="b1" onclick="getNumber(value)" value="6">6</button>
+        <button class="b1" onclick="getNumber(value)" value="*">*</button>
+        <br>
+        <button class="b1" onclick="getNumber(value)" value="7">7</button>
+        <button class="b1" onclick="getNumber(value)" value="8">8</button>
+        <button class="b1" onclick="getNumber(value)" value="9">9</button>
+        <button class="b1" onclick="getNumber(value)" value="/">/</button>
+        <br>
+        <button class="b1" onclick="getNumber(value)" value="0">0</button>
+        <button class="b1" onclick="getNumber(value)" value=".">.</button>
+        <button class="b1" onclick="answer(value)" value="=">=</button>
+        <button class="b1" onclick="getNumber(value)" value="+">+</button>
+        
+        
+      
+        
+    </div>
+
+
+    <script>
+        
+      function getNumber(x){
+          b = document.getElementById("i1");
+          if(x == 'C'){
+            b.value = " ";}
+          else if (x == '+'){
+            b.value += x;}
+          else if (x == '-'){
+            b.value += x;}
+          else if (x == '*'){
+            b.value += x;}
+          else{
+            b.value += x;}
+      }
+
+      function answer(x){
+        ans = Math.floor(+eval(b.value));
+        document.getElementById('i1').value =  + ans;
+
+      }
+     
+
+    </script>
+
+    
+</body>
+</html>
